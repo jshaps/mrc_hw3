@@ -1,0 +1,12 @@
+<launch>
+
+   <group ns="turtlesim1">
+     <node pkg="turtlesim" name="sim" type="turtle_teleop_key"/>
+
+     <node pkg="turtlesim" name="teleop_turtle" type="turtlesim_node"/>
+      <remap from="input" to="turtlesim1/turtle1"/>
+      <remap from="output" to="screen"/>
+
+   </group>
+
+</launch>
